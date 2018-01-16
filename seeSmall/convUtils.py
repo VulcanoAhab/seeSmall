@@ -2,7 +2,7 @@ import numpy as np
 import collections
 
 
-class Data:
+class WorkingSet:
     """
     """
     _dataObj=collections.namedtuple("conv", ["label", "_features"])
@@ -59,3 +59,30 @@ class Data:
         """
         """
         return np.array([d.label for d in cls._eval_set])
+
+class Transforms:
+    """
+    """
+    _height=28
+    _width=28
+
+    @classmethod
+    def set_size(cls, height, width):
+        """
+        """
+        cls._height=height
+        cls._width=width
+    
+    @classmethod
+    def set_color(cls, color=gray):
+        """
+        not implemented yet
+        ---
+        """
+        cls._color=color
+
+    @classmethod
+    def run(cls, image):
+        """
+        """
+        pass
